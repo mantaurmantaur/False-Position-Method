@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,16 +40,6 @@ namespace False_Position_Method
             chart2.Series.Clear();
 
             string rawInput = txtEquation.Text.Trim();
-
-            // Check for trigonometric functions
-            if (Regex.IsMatch(rawInput, @"\b(sin|cos|tan)\b", RegexOptions.IgnoreCase))
-            {
-                MessageBox.Show("This application doesn't support trigonometric functions.",
-                              "Unsupported Function",
-                              MessageBoxButtons.OK,
-                              MessageBoxIcon.Warning);
-                return;
-            }
             string equationInput = ConvertExponents(rawInput);
 
             if (!double.TryParse(txtA.Text, out double a) ||
@@ -90,7 +80,7 @@ namespace False_Position_Method
             int iter = 0;
 
             int maxIter = 100;
-            //int stuckCounter = 0;
+            int stuckCounter = 0;
 
             while (iter < maxIter)
             {
@@ -123,18 +113,18 @@ namespace False_Position_Method
                 {
                     b = c;
                     fb = fc;
-                    //stuckCounter = 0;
+                    stuckCounter = 0;
                 }
                 else
                 {
                     a = c;
                     fa = fc;
-                    ////stuckCounter++;
+                    stuckCounter++;
 
-                    //if (stuckCounter >= 2)
-                    //{
-                    //    fb /= 2;
-                    //}
+                    if (stuckCounter >= 2)
+                    {
+                        fb /= 2;
+                    }
                 }
             }
 

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.label1 = new System.Windows.Forms.Label();
             this.controlsPanel = new System.Windows.Forms.Panel();
@@ -100,8 +100,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(38, 27);
             this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.UseVisualStyleBackColor = true;    
             // 
             // mainPanel
             // 
@@ -126,6 +125,7 @@
             // 
             this.output.Location = new System.Drawing.Point(12, 190);
             this.output.Name = "output";
+            this.output.ReadOnly = true;
             this.output.Size = new System.Drawing.Size(410, 324);
             this.output.TabIndex = 19;
             this.output.Text = "";
@@ -133,16 +133,16 @@
             // 
             // chart2
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(428, 190);
             this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart2.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(458, 324);
             this.chart2.TabIndex = 17;
             this.chart2.Text = "chart2";
@@ -188,11 +188,11 @@
             this.txtB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtB.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtB.ForeColor = System.Drawing.Color.White;
-            this.txtB.Location = new System.Drawing.Point(293, 122);
+            this.txtB.Location = new System.Drawing.Point(81, 122);
             this.txtB.Multiline = true;
             this.txtB.Name = "txtB";
             this.txtB.Size = new System.Drawing.Size(100, 35);
-            this.txtB.TabIndex = 13;
+            this.txtB.TabIndex = 12;
             // 
             // txtA
             // 
@@ -200,11 +200,11 @@
             this.txtA.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtA.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtA.ForeColor = System.Drawing.Color.White;
-            this.txtA.Location = new System.Drawing.Point(78, 122);
+            this.txtA.Location = new System.Drawing.Point(293, 122);
             this.txtA.Multiline = true;
             this.txtA.Name = "txtA";
             this.txtA.Size = new System.Drawing.Size(100, 35);
-            this.txtA.TabIndex = 12;
+            this.txtA.TabIndex = 13;
             // 
             // label3
             // 
